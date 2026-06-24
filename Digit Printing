@@ -1,0 +1,36 @@
+package GPO;
+import java.util.Scanner;
+public class Number {
+    static void Decimal(int N){
+        int Evensum = 0;
+        int Oddcount = 0;
+        if(N>0){
+            while(N>0){
+              int Digits = N%10;
+               if(Digits%2==0){
+                   System.out.println("Even");
+                   System.out.println("Even Digits: " +Digits);
+                   Evensum += Digits ;
+                   System.out.println("Evensum: " +Evensum);
+               }
+              else{
+                   System.out.println("Odd");
+                   System.out.println("Odd Digits: " +Digits);
+                   Oddcount++;
+                   System.out.println("OddCount: " +Oddcount);
+               }
+              N=N/10;
+            }
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner NO = new Scanner(System.in);
+            int N ;
+            N = NO.nextInt();
+            Decimal(N);
+
+    }
+}
