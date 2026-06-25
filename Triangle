@@ -1,0 +1,37 @@
+package GPO;
+import java.util.Scanner;
+public class Triangles {
+    int A ;
+    int B ;
+    int C ;
+     Triangles(int A,int B,int C){
+        this.A = A ;
+        this.B = B ;
+        this.C = C ;
+    }
+    void showDetails() {
+        int sum =A+B+C;
+        if (sum == 180) {
+            System.out.println("Triangle is Possible");
+            if (A < 90 && B < 90 && C < 90) {
+                System.out.println("Acute-Angled Triangle");
+            } else if (A <= 90 && B <= 90 && C <= 90) {
+                System.out.println("Right-Angled Triangle");
+            }
+            if ((A >= 90 || A <= 90) && (B >= 90 || B <= 90) && (C >= 90 || C <= 90)) {
+                System.out.println("Obtuse-Angled Triangle");
+            }
+        } else {
+            System.out.println("Triangle is not possible");
+        }
+    }
+
+    public static void main(String[] args) {
+    Scanner Tri = new Scanner(System.in);
+    int A = Tri.nextInt();
+    int B = Tri.nextInt();
+    int C = Tri.nextInt();
+    Triangles Angles = new Triangles(A,B,C);
+    Angles.showDetails();
+    }
+}
