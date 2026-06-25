@@ -1,0 +1,22 @@
+package GPO;
+import java.util.Scanner;
+public class Reversedigits {
+  public Reversedigits(int num){
+    int temp = num;
+    int reversed = 0;
+    int Digits;
+    while(temp>0){
+        Digits=temp%10;
+        System.out.println("Digits: " +Digits);
+      reversed = (reversed*10)+Digits;
+        System.out.println(reversed);
+        temp=temp/10;
+       }
+    }
+
+    public static void main(String[] args) {
+        Scanner Re = new Scanner(System.in);
+        int num = Re.nextInt();
+        Reversedigits RD = new Reversedigits(num);
+    }
+}
