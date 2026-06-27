@@ -1,0 +1,29 @@
+package GPO;
+import java.util.Scanner;
+public class LogicalOperators {
+    public boolean LOGICALAND(boolean A,boolean B){
+        System.out.println(A && B);
+        return true;
+    }
+    public boolean LOGICALOR(boolean A,boolean B){
+        System.out.println(A || B);
+        return true;
+    }
+    public boolean LOGICALNOT(boolean A){
+        System.out.println(!A);
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner op = new Scanner(System.in);
+        LogicalOperators log = new LogicalOperators();
+        int n = op.nextInt();
+        System.out.println("n: " +n);
+        for (int i = 0; i <= n; i++) {
+            boolean A = op.nextBoolean();
+            boolean B = op.nextBoolean();
+            log.LOGICALAND(A, B);
+            log.LOGICALOR(A, B);
+            log.LOGICALNOT(A);
+        }
+    }
+}
