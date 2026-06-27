@@ -1,0 +1,69 @@
+package GPO;
+import java.util.Scanner;
+public class Arithmetic {
+    private int ADD = 0;
+    public void addnumber(int num){
+        System.out.println("Number+: " + num);
+        ADD+=num;
+        System.out.println("ADDITION: " +ADD);
+    }
+    private int SUB = 0;
+    public void subnumber(int num1){
+        System.out.println("Number-: " +num1);
+        SUB=num1-SUB;
+        System.out.println("SUBTRACTOR: " +SUB);
+    }
+    private int MUL = 1;
+    public void mulnumber(int num2){
+        System.out.println("Number*: " +num2);
+        MUL*=num2;
+        System.out.println("MULTIPLICATION: " +MUL);
+    }
+    private int DIV ;
+    private int MOD;
+    public void divnumber(int numerator,int denominator){
+        System.out.println("Numerator: " +numerator);
+        System.out.println("Denominator: " +denominator);
+        DIV=numerator/denominator;
+        System.out.println("DIVISION: " +DIV);
+        MOD=numerator%denominator;
+        System.out.println("MODULE" +MOD);
+    }
+
+    public static void main(String[] args) {
+        Scanner alu= new Scanner(System.in);
+        Arithmetic calc = new Arithmetic();
+        int k = alu.nextInt();
+        int n = alu.nextInt();
+        if(k==1) {
+            for (int i = 0; i <= n; i++) {
+                int num = alu.nextInt();
+                calc.addnumber(num);
+            }
+        }
+        if(k==2) {
+            for (int i = 0; i <= n; i++) {
+                int num1 = alu.nextInt();
+                calc.subnumber(num1);
+            }
+        }
+        if(k==3) {
+            for (int i = 0; i <= n; i++) {
+                int num2 = alu.nextInt();
+                // int num3 =  alu.nextInt();
+                calc.mulnumber(num2);
+            }
+        }
+        if(k==4) {
+            for (int i = 0; i < n; i++) {
+                int numerator = alu.nextInt();
+                int denominator = alu.nextInt();
+                if (numerator > denominator) {
+                    calc.divnumber(numerator, denominator);
+                } else {
+                    System.out.println("Invalid");
+                }
+            }
+        }
+    }
+}
