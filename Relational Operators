@@ -1,0 +1,45 @@
+package GPO;
+import java.util.Scanner;
+public class RelationalOperator {
+    public boolean EQUALTO(int A,int B){
+        System.out.println(A==B);
+        return true;
+    }
+    public boolean NOTEQUALTO(int A,int B){
+        System.out.println(A!=B);
+        return true;
+    }
+    public boolean GREATERTHAN(int A,int B){
+        System.out.println(A<=B);
+        return true;
+    }
+    public boolean LESSERTHAN(int A,int B){
+        System.out.println(A>=B);
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner rel = new Scanner(System.in);
+        RelationalOperator Digit = new RelationalOperator();
+        int k = rel.nextInt();
+        System.out.println("k: " +k);
+        int n = rel.nextInt();
+        System.out.println("n: " +n);
+        for(int i = 0;i<n;i++) {
+            int A = rel.nextInt();
+            int B = rel.nextInt();
+
+            if (k == 1) {
+                Digit.EQUALTO(A, B);
+            }
+            if (k == 2) {
+                Digit.NOTEQUALTO(A, B);
+            }
+            if (k == 3) {
+                Digit.GREATERTHAN(A, B);
+            }
+            if (k == 4) {
+                Digit.LESSERTHAN(A, B);
+            }
+        }
+    }
+}
