@@ -1,0 +1,37 @@
+package GPO;
+import java.util.Scanner;
+public class Assignment {
+    public void addition(int A,int B){
+        A+=B;
+        System.out.println(A);
+    }
+    public void subractor(int A,int B){
+        A-=B;
+        System.out.println(A);
+    } public void multiple(int A,int B){
+        A*=B;
+        System.out.println(A);
+    } public void division(int A,int B){
+        A/=B;
+        System.out.println(A);
+    }public void module(int A,int B){
+        A%=B;
+        System.out.println(A);
+    }public boolean equal(int A,int B){
+        System.out.println(A==B);
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner as = new Scanner(System.in);
+        int A = as.nextInt();
+        int B = as.nextInt();
+        Assignment assign = new Assignment();
+       assign.addition(A,B);
+        assign.subractor(A,B);
+        assign.multiple(A,B);
+        assign.division(A,B);
+        assign.module(A,B);
+        assign.equal(A,B);
+    }
+}
+
