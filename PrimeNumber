@@ -1,0 +1,18 @@
+package GPO;
+import java.util.Scanner;
+public class Prime {
+    public static void main(String[] args) {
+        Scanner CS = new Scanner(System.in);
+      //  System.out.println(N);
+        int M = CS.nextInt();
+        int N = CS.nextInt();
+        for(int j = 2;j<=M;j++) {
+            int num = j;
+            for (int i = 1; i <= N; i++) {
+                if (num % i == 0 && num == i && ((num%2==1 || num==2) && (num==3 || num%3==1 || num%3==2))&& (num==5 ||num%5==1 || num%5==2 || num%5==3 || num%5==4)&&(num==7 || num%7==1|| num%7==2 || num%7==3 || num%7==4 || num%7==5 || num%7==6 )) {
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}
