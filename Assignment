@@ -1,0 +1,203 @@
+package Assignment;
+
+//AritmeticProgression
+import java.util.Scanner;
+public class AritmeticProgression {
+    public static void main(String[] args) {
+        Scanner num =new Scanner(System.in);
+        int N = num.nextInt(); //input:20
+        int A = num.nextInt(); //input:0
+        int B = num.nextInt(); //input:5
+        for(int i = 0;i<=N;i++){
+            A+=B;
+            System.out.println(A);
+        }
+    }
+}
+
+//CountSeries
+import java.util.Scanner;
+public class CountSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        int a = num.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.println(a-=1);
+            System.out.println(i);
+        }
+    }
+}
+
+//CubeSeries
+import java.util.*;
+public class CubeSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        for(int i = 1;i<=n;i++) {
+            int result  = (int)Math.pow(i,3)+1;
+            System.out.println(result);
+        }
+    }
+}
+
+//EvenNumberSeries
+import java.util.Scanner;
+public class EvenNumberSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        for(int i=1;i<n;i++){
+            System.out.println(i*2);
+        }
+    }
+}
+
+//FibonacciSeries 
+import java.util.Scanner;
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int N = num.nextInt();
+        int A = 0;
+        int B = 1;
+        for(int i = 0;i<=N;i++){
+            System.out.println(A);
+            int C =A+B;
+            A = B;
+            B = C;
+
+        }
+    }
+}
+
+//GeometricProgression
+import java.util.Scanner;
+public class GeometricProgression {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        int A = 1;
+        for(int i = 0;i<=n;i++){
+            A+=A;
+            System.out.println(A);
+        }
+    }
+}
+
+//MultipleSeries
+import java.util.Scanner;
+public class MultipleSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+       /* for(int i = 0;i<=n;i++){
+            if(i%2==1){
+                for(int j=0;j<=i;j++) {
+                    System.out.print(i);
+                }
+            }
+            else{
+                for(int j = 0;j<=i;j++){
+                    System.out.print(i);
+                }
+            }
+        }*/
+        for(int i =0;i<=n;i++){
+            System.out.print(i);
+            System.out.print(i+1);
+            System.out.print(i+2);
+        }
+    }
+}
+
+//OddNumberSeries
+import java.util.Scanner;
+public class OddNumberSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        for(int i=1;i<=n;i++){
+            if(i%2==1) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+/*import java.util.Scanner;
+public class OddNumberSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int N = num.nextInt();
+
+        for(int i = 0;i<=N;i++){
+            i = i+1;
+            System.out.println(i);
+        }
+    }
+}*/
+
+// PatternSeries
+import java.util.Scanner;
+public class PatternSeries {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        int n = num.nextInt();
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=i;j++){
+                System.out.print(3);
+            }
+            System.out.println( );
+        }
+    }
+}
+
+//Prime
+import java.util.Scanner;
+public class Prime {
+    public static void main(String[] args) {
+        Scanner CS = new Scanner(System.in);
+      //  System.out.println(N);
+        int M = CS.nextInt();
+        int N = CS.nextInt();
+        for(int j = 2;j<=M;j++) {
+            int num = j;
+            for (int i = 1; i <= N; i++) {
+                if ((num % i == 0 && num == i) && ((num%2==1 || num==2) && (num==3 || num%3==1 || num%3==2))&& (num==5 ||num%5==1 || num%5==2 || num%5==3 || num%5==4)&&(num==7 || num%7==1|| num%7==2 || num%7==3 || num%7==4 || num%7==5 || num%7==6 )) {
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+}
+
+//QuadraticSequence
+import java.util.Scanner;
+public class QuadraticSequence {
+    public static void main(String[] args) {
+        Scanner num =new Scanner(System.in);
+        int N = num.nextInt();
+        int A = 1;
+        for (int i = 1;i<=N;i++){
+            System.out.println( A+=i);
+        }
+    }
+}
+
+//TriangularNumber
+import java.util.Scanner;
+public class TriangularNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int B = 0;
+        int A = 1;
+        for (int i = 0; i <= n; i++) {
+                B+=A;
+                System.out.println(B);
+                A++;
+        }
+    }
+}
